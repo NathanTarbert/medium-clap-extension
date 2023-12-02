@@ -1,0 +1,13 @@
+{
+  "manifest_version": 1,
+  "name": "Medium Clap Extension",
+  "version": "1.0",
+  "description": "A browser extension to clap 50 times on Medium articles",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://medium.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
