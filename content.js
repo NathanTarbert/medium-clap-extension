@@ -1,3 +1,15 @@
+var walker = document.createTreeWalker(
+  document.documentElement,
+  NodeFilter.SHOW_ELEMENT // only elements
+);
+while (walker.nextNode()) {
+  let current = walker.currentNode;
+  console.log(
+    current.tagName,
+    [...current.attributes].map(({ value, name }) => `${name}=${value}`).join()
+  );
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   let clapButton = document.querySelector(
     'button[data-testid="headerClapButton"]'
@@ -16,24 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         await new Promise((resolve) => setTimeout(resolve, 10)); // Introducing a 10ms delay between claps
       }
-      console.log("+50 Claps! Now, go join the SERP community!");
+      console.log("+50 Claps enabled!");
     }
     performClap();
   } else {
     console.log("Clap button not found!");
-  }
-
-  var walker = document.createTreeWalker(
-    document.documentElement,
-    NodeFilter.SHOW_ELEMENT // only elements
-  );
-  while (walker.nextNode()) {
-    let current = walker.currentNode;
-    console.log(
-      current.tagName,
-      [...current.attributes]
-        .map(({ value, name }) => `${name}=${value}`)
-        .join()
-    );
   }
 });
