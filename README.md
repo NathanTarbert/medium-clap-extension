@@ -1,4 +1,4 @@
-# medium-clap-extension
+# Medium Clap Chrome Extension
 
 A plugin to that adds 50 claps on Medium with one click of a button
 
