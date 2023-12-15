@@ -8,9 +8,9 @@ When supporting friends aricles on Medium you can add this extension and with th
 
 Here's the steps to add the extension to Chrome/Brave/Edge
 
-- Open Chrome and navigate to chrome://extensions.
-- Enable Developer mode by clicking the toggle switch next to Developer mode.
-- Click the Load unpacked button and select the extension directory.
+- Open Chrome and navigate to `chrome://extensions`.
+- Enable `Developer mode` by clicking the toggle switch.
+- Select the `Load unpacked` button in the extension directory.
 
 Once the plugin is loaded open the console to see if you see "+50 Claps enabled!"
 
